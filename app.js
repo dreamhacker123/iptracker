@@ -11,7 +11,7 @@ setTimeout(()=>{
 },1500)
 
 
-}
+};
 
 
 function getData(){
