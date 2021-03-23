@@ -28,10 +28,10 @@ function getData(){
     .then(data =>{
         fetching_data.style.display = "block";
         setTimeout(()=>{
-        result_label.innerHTML=`<b>IP ADDRESS:</b><br><b>IP TYPE:</b><br><b>CONTINENT:</b><br><b>COUNTRY:</b><br><b>SERVICE PROVIDER:</b><br><b>REGION:</b><br>
+        result_label.innerHTML=`<b>IP ADDRESS:</b><br><b>IP TYPE:</b><br><b>CONTINENT CODE:</b><br><b>COUNTRY:</b><br><b>SERVICE PROVIDER:</b><br><b>REGION:</b><br>
         <b>CITY:</b><br><b>ZIPCODE:</b><br><b>LATITUDE:</b><br><b>LONGITUDE:</b><br><br><b>FLAG:</b><br>`
-        result_section.innerHTML = `${data.ip}<br>${data.type}<br>${data.continent_name}<br>${data.country_name}<br>
-        ${data.org}<br>${data.region_name}<br>${data.city}<br>${data.zip}<br>
+        result_section.innerHTML = `${data.ip}<br>${data.version}<br>${data.continent_code}<br>${data.country_name}<br>
+        ${data.org}<br>${data.region_name}<br>${data.city}<br>${data.postal}<br>
         ${data.latitude}<br>${data.longitude}<br><img src="https://www.countryflags.io/${data.country_code.toLowerCase()}/flat/64.png"/>`;
         console.log(data);
         fetching_data.style.display = "none";
