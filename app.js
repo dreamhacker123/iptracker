@@ -28,6 +28,10 @@ function getData(){
     .then(data =>{
         fetching_data.style.display = "block";
         setTimeout(()=>{
+        
+        if(data.country_name){
+            
+            
         result_label.innerHTML=`<b>IP ADDRESS:</b><br><b>IP TYPE:</b><br><b>CONTINENT CODE:</b><br><b>COUNTRY:</b><br><b>SERVICE PROVIDER:</b><br><b>REGION:</b><br>
         <b>CITY:</b><br><b>ZIPCODE:</b><br><b>LATITUDE:</b><br><b>LONGITUDE:</b><br><br><b>FLAG:</b><br>`
         result_section.innerHTML = `${data.ip}<br>${data.version}<br>${data.continent_code}<br>${data.country_name}<br>
@@ -35,6 +39,17 @@ function getData(){
         ${data.latitude}<br>${data.longitude}<br><img src="https://www.countryflags.io/${data.country_code.toLowerCase()}/flat/64.png"/>`;
         console.log(data);
         fetching_data.style.display = "none";
+            
+        };
+            
+        else{
+        
+            alert("IP not in Existence");
+            fetching_data.style.display = "none";
+        }
+        
+            
+            
         },1000);
         
 
