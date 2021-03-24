@@ -40,7 +40,7 @@ function getData(){
         console.log(data);
         fetching_data.style.display = "none";
             
-        };
+        }
             
         else{
         
