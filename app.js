@@ -32,7 +32,7 @@ function getData(){
         if(data.country_name){
             
             
-        result_label.innerHTML=`<p><b>IP ADDRESS:</b></p><br><b>IP TYPE:</b><br><b>CONTINENT CODE:</b><br><b>COUNTRY:</b><br><b>SERVICE PROVIDER:</b><br><b>REGION:</b><br>
+        result_label.innerHTML=`<p><b>IP ADDRESS:</b></p><b>IP TYPE:</b><br><b>CONTINENT CODE:</b><br><b>COUNTRY:</b><br><b>SERVICE PROVIDER:</b><br><b>REGION:</b><br>
         <b>CITY:</b><br><b>ZIPCODE:</b><br><b>LATITUDE:</b><br><b>LONGITUDE:</b><br><br><b>FLAG:</b><br>`
         
         result_section.innerHTML = `<p style="word-wrap: break-word;">${data.ip}</p>${data.version}<br>${data.continent_code}<br>${data.country_name}<br>
